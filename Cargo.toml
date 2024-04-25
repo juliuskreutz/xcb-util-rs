@@ -1,0 +1,18 @@
+[package]
+name = "xcb-util"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+xcb = "1.4.0"
+xcb-util-sys = { version = "0.1.0", path = "xcb-util-sys" }
+
+[features]
+cursor = ["xcb-util-sys/cursor"]
+ewmh = ["xcb-util-sys/ewmh"]
+icccm = ["xcb-util-sys/icccm"]
+
+[package.metadata.docs.rs]
+all-features = true
